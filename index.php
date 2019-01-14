@@ -33,23 +33,12 @@
 
 require __DIR__ . '\vendor\autoload.php';
     $head = new \KCSG\HeaderFooter();
-    $head->header = [
-         ['route'=> '/posts', 'name'=> 'Add Post'],
-         ['route'=> '/about-us', 'name'=> 'About Us'],
-         ['route'=> '/registration', 'name'=> 'Register'],
-         ['route'=> '/login', 'name'=> 'Log In'],
-         ];
     $head->header();
 
     $map = new \KCSG\Map();
     $map->googleMap();
 
     $foot = new \KCSG\HeaderFooter();
-    $foot->footer = [
-        ['social'=>'https://www.facebook.com/', 'i'=>'fa fa-2x fa-fw fa-facebook text-white'],
-        ['social'=>'https://twitter.com/', 'i'=>'fa fa-2x fa-fw fa-twitter text-white'],
-        ['social'=>'https://www.linkedin.com/company/', 'i'=>'fa fa-2x fa-fw fa-linkedin text-white'],
-        ['social'=>'https://www.google.com/', 'i'=>'fa fa-2x fa-fw fa-google text-white']];
     $foot->footer();
 
 ?>
