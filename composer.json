@@ -1,0 +1,14 @@
+{
+    "name": "simas/snuber3",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Simas Armolaitis",
+            "email": "s.armolaitis@gmail.com"
+        }
+    ],
+    "require": {},
+    "atuoload":{
+        "KCS\\" : "app/"
+    }
+}
