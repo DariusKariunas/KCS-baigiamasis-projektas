@@ -8,7 +8,9 @@
         }
     ],
     "require": {},
-    "atuoload":{
-        "KCS\\" : "app/"
+    "autoload":{
+        "psr-4": {
+            "KCSG\\": "app/"
+        }
     }
 }

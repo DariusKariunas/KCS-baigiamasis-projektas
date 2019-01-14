@@ -6,8 +6,74 @@ body {
     height: 100%;
     padding: 0;
     margin: 0;
+    background: blue;
 }
 
 #map {
     height: 100%;
 }
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    z-index:-9999;
+}
+
+.header-font {
+    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fd1506;
+}
+
+.bg-primary {
+    width: 100vw;
+    background-color: #343a40 !important;
+}
+
+.footer {
+
+    background: #EDEFF1;
+    height: auto;
+    padding-bottom: 0px;
+    margin-top: 0px;
+
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #DDDDDD;
+}
+.footer p {
+    margin: 1px;
+    padding: 1px;
+}
+.footer img {
+    max-width: 100%;
+}
+.footer h3 {
+    border-bottom: 1px solid #BAC1C8;
+    color: #54697E;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    padding: 40px 0 10px;
+    text-transform: uppercase;
+}
+.footer ul {
+    font-size: 13px;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 15px;
+    color: #7F8C8D;
+}
+.footer ul li a {
+    padding: 0 0 5px 0;
+    display: block;
+}
+.footer a {
+    color: #78828D
+}
+

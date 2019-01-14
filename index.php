@@ -7,69 +7,53 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
-
+    <script src="js/script.js"></script>
     <title>Snuber</title>
-    <style>
-
-        #map {
-            height: 100%;
-        }
-
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
-</head>
-<body>
-<div id="map"></div>
-<script>
-    var map;
-    function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: -34.397, lng: 150.644},
-            zoom: 8
-        });
+<style>
+    #map {
+    height: 100%;
     }
-</script>
 
-<nav class=" navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light fixed-top">
-    <div class="container" >
-        <a class="navbar-brand" href="#">SNU</a>
-        <button class="navbar-toggler" type="button" (click)="toggleNavbar()" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" [ngClass]="{'show':navbarOpen}" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link" routerLink="/gmaps" routerLinkActive="">Home<span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" routerLink="/posts" routerLinkActive="">Add Post</a>
-                <a class="nav-item nav-link" routerLink="/about-us" routerLinkActive="">About Us</a>
-                <a class="nav-item nav-link" routerLink="/registration" routerLinkActive="">Register</a>
-                <a class="nav-item nav-link" routerLink="/login" routerLinkActive="">Log In</a>
-            </div>
-        </div>
-    </div>
-</nav>
-<div class="navbar">
-    <div class="container" >
-        <a class="navbar-brand" href="#">SNU</a>
-    </div>
-</div>
-<?php
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
 
-require __DIR__. '\vendor\autoload.php';
+</style>
+</head>
 
+<body>
 
-
-?>
-<div class="container"></div>
-<div class="container" id="map"></div>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3mCTqdLJTjE6XPFG_hKr6d9NQyPXk1_c&callback=initMap"
-        async defer></script>
-<script src="js/script.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+
+<?php
+
+require __DIR__ . '\vendor\autoload.php';
+    $head = new \KCSG\HeaderFooter();
+    $head->header = [
+         ['route'=> '/posts', 'name'=> 'Add Post'],
+         ['route'=> '/about-us', 'name'=> 'About Us'],
+         ['route'=> '/registration', 'name'=> 'Register'],
+         ['route'=> '/login', 'name'=> 'Log In'],
+         ];
+    $head->header();
+
+    $map = new \KCSG\Map();
+    $map->googleMap();
+
+    $foot = new \KCSG\HeaderFooter();
+    $foot->footer = [
+        ['social'=>'https://www.facebook.com/', 'i'=>'fa fa-2x fa-fw fa-facebook text-white'],
+        ['social'=>'https://twitter.com/', 'i'=>'fa fa-2x fa-fw fa-twitter text-white'],
+        ['social'=>'https://www.linkedin.com/company/', 'i'=>'fa fa-2x fa-fw fa-linkedin text-white'],
+        ['social'=>'https://www.google.com/', 'i'=>'fa fa-2x fa-fw fa-google text-white']];
+    $foot->footer();
+
+?>
+
 </body>
 </html>
+
