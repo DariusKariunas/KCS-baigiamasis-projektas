@@ -37,11 +37,11 @@ class DBfunctions
         $stmt->execute();
     }
 
-    public function getDataById($id): Project_db
+    public function getDataById($id)
     {
         $stmt = $this->conn->prepare("SELECT * FROM project_db WHERE id = $id");
         $stmt->execute();
-        $stmt->setFetchMode(\PDO::FETCH_ASSOC, Project_db::class);
+        $stmt->setFetchMode(\PDO::FETCH_ASSOC);
 
         return $stmt->fetch();
     }

@@ -5,17 +5,19 @@ namespace KCSG\Database;
 class Validation
 {
     public $error;
+    public $posterror;
 
     public function __construct()
     {
         $this->error = [];
+        $this->posterror= [];
     }
 
     public function validate($value){
         if (!preg_match("/^[a-zA-Z ]*$/", $value["name"])) {
             array_push($this->error, 'Name must contain only letters');
         }
-        if (!filter_var($value["email"], FILTER_VALIDATE_EMAIL)) {
+        if (!empty($value['email']) && !filter_var($value["email"], FILTER_VALIDATE_EMAIL)) {
             array_push($this->error, 'Invalid email');
         }
         if (empty($value['name'])){
@@ -45,9 +47,28 @@ class Validation
         }
     }
 
-    public function validateLogin($value){
-       // if ($value['password']=$_POST['password']){
-            //
-        //}
+    public function validatePost(){
+        if (empty($value["product"])){
+            array_push($this->posterror, 'Product is required');
+        }
+        if (empty($value['description'])){
+            array_push($this->posterror, 'Description is required');
+        }
+        if (empty($value['city'])){
+            array_push($this->posterror, 'City is required');
+        }
+        if (empty($value['zipcode'])){
+            array_push($this->posterror, 'Zipcode is required');
+        }
+    }
+
+    public function posterror(){
+        if (count($this->posterror) > 0){
+            echo "<div>";
+            foreach ($this->posterror as $value){
+                echo $value . ";". "  ";
+            }
+            echo "</div>";
+        }
     }
 }

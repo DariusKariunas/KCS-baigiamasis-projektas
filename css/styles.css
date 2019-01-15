@@ -150,3 +150,14 @@ input::-webkit-input-placeholder {
 
 }
 /*Login ^*/
+#chatbtn{
+    color: rgba(255,255,255,.5);
+}
+#chatbtn:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+}
+#chatbtn:active{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+}

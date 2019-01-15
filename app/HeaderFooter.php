@@ -55,6 +55,7 @@ class HeaderFooter
         foreach ($this->header as $value) {
             echo "<a class='nav-item nav-link' href='$value[route]'>$value[name]</a>";
         }
+
         if (isset($_SESSION['logged']) && $_SESSION['logged'] == true) {
             echo "<a class='nav-item nav-link' href='/logout.php'>Log Out</a>";
         } else {
