@@ -8,4 +8,9 @@ function initMap() {
         scrollwheel: true,
 
     });
+    var marker = new google.maps.Marker({
+        position: {lat: 54.898178, lng: 23.902594},
+        map: map,
+        title: 'Hello World!'
+    });
 }
