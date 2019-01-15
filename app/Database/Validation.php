@@ -39,9 +39,15 @@ class Validation
         if (count($this->error) > 0){
            echo "<div>";
         foreach ($this->error as $value){
-            echo "<p>$value</p>";
+            echo "  $value" . ";" . "  ";
         }
   	        echo "</div>";
         }
+    }
+
+    public function validateLogin($value){
+       // if ($value['password']=$_POST['password']){
+            //
+        //}
     }
 }

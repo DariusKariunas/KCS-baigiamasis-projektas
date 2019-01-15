@@ -13,7 +13,7 @@ class Login
                         <h1 class=\"title\">SNU</h1>
                         </div>  
             <div class=\"main-login main-center\">
-                <form class=\"form-horizontal\" method=\"post\" action=\"#\">                            
+                <form class=\"form-horizontal\" method='post' action='/login.php'>                            
                 <div class=\"form-group\">
                     <label for=\"username\" class=\"cols-sm-2 control-label\">Username</label>
                     <div class=\"cols-sm-10\">
@@ -33,8 +33,11 @@ class Login
                     </div>
                 </div>               
                 <div class=\"form-group \">
-                    <button type=\"button\" class=\"btn btn-secondary btn-lg btn-block login-button\" routerLink=\"/gmaps\" routerLinkActive=\"\">Login</button>
-                </div>          
+                    <button type=\"submit\" class=\"btn btn-secondary btn-lg btn-block login-button\" routerLink=\"/gmaps\" routerLinkActive=\"\">Login</button>
+                </div>    
+                    <div class=\"login-register\">
+                <a href='/register.php'>Not Registered yet?</a>
+                 </div>      
                 </form>
             </div>
             </div>

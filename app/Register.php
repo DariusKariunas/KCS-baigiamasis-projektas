@@ -12,7 +12,7 @@ class Register
       <div class=\"row\">
         <div class=\"col-lg-8 col-md-10 cols-sm-10\">
           <div class=\"main-login main-center\">
-            <form class=\"form-horizontal\" method='post' action='/dataprocess.php'>
+            <form class=\"form-horizontal\" method='post' action='/register.php'>
             <div class=\"form-group\">
                 <label for=\"name\" class=\"control-label\">Your Name</label>
                 <div>
@@ -61,8 +61,8 @@ class Register
               <div class=\"input-group\">
                 <button type='submit' class=\"btn btn-secondary btn-lg btn-block login-button\">Register</button>
               </div>
-              <div class=\"login-register\">
-                <a href='/login.php'>Login</a>
+              <div class='login-register'>
+                <a href='/login.php'><br>Already have an account? Login</a>
               </div>
             </form>
           </div>

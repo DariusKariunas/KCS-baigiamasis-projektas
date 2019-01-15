@@ -41,7 +41,16 @@ class DBfunctions
     {
         $stmt = $this->conn->prepare("SELECT * FROM project_db WHERE id = $id");
         $stmt->execute();
-        $stmt->setFetchMode(\PDO::FETCH_CLASS, Project_db::class);
+        $stmt->setFetchMode(\PDO::FETCH_ASSOC, Project_db::class);
+
+        return $stmt->fetch();
+    }
+
+    public function getDataByUsername($username)
+    {
+        $stmt = $this->conn->prepare("SELECT * FROM project_db WHERE username = '$username'");
+        $stmt->execute();
+        $stmt->setFetchMode(\PDO::FETCH_ASSOC);
 
         return $stmt->fetch();
     }

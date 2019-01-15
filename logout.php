@@ -1,7 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Simas
- * Date: 19/01/15
- * Time: 20:28
- */
+
+require __DIR__ . '\vendor\autoload.php';
+
+session_start();
+session_unset();
+session_destroy();
+
+header('location: index.php');

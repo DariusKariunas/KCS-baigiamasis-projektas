@@ -1,36 +1,39 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
-    <script src="js/script.js"></script>
-    <title>Snuber</title>
-</head>
-<body>
 <?php
 
 require __DIR__ . '\vendor\autoload.php';
-    $head = new \KCSG\HeaderFooter();
-    $head->header();
 
-    $err = new KCSG\Database\Validation();
-    $err->error();
-
-    $reg = new KCSG\Register();
-    $reg->register();
-
-    $foot = new \KCSG\HeaderFooter();
-    $foot->footer();
-?>
+session_start();
 
 
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+$head = new \KCSG\HeaderFooter();
+$head->header();
+
+$render = new KCSG\Database\Handler();
+$dbfunction = new KCSG\Database\DBfunctions();
+$err = new KCSG\Database\Validation();
+$data = [];
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $data = $render->handler();
+    $err->error;
+    $err->validate($data);
+    if (empty($err->error)) {
+        $dbfunction->insertProject_db($data);
+        header('location: login.php');
+    } else {
+        echo "<div style='display: flex; color: red' class='justify-content-center'>";
+        $err->error();
+        echo "</div>";
+    }
+}
+
+$err = new KCSG\Database\Validation();
+$err->error();
+
+$reg = new KCSG\Register();
+$reg->register();
+
+$foot = new \KCSG\HeaderFooter();
+$foot->footer();
+
 
