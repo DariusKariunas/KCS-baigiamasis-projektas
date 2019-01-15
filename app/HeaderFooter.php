@@ -23,13 +23,12 @@ class HeaderFooter
             ['social'=>'https://www.google.com/', 'i'=>'fa fa-2x fa-fw fa-google text-white']];
     }
 
-
     function header(){
         echo "<nav class=\" navbar navbar-dark bg-dark navbar-expand-lg navbar-light bg-light fixed-top\">
             <div class=\"container\" ><a class=\"navbar-brand\" href='/'>SNU</a>
             <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNavAltMarkup\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
             <span class=\"navbar-toggler-icon\"></span></button>
-            <div class=\"collapse navbar-collapse justify-content-end\" [ngClass]=\"{'show':navbarOpen}\" id=\"navbarNavAltMarkup\">
+            <div class=\"collapse navbar-collapse justify-content-end\" id=\"navbarNavAltMarkup\">
             <div class=\"navbar-nav\">";
 
         echo "<a class='nav-item nav-link' href='/'>Home<span class=\"sr-only\">(current)</span></a>";
@@ -45,6 +44,7 @@ class HeaderFooter
     }
 
     function footer(){
+        echo "<link rel=\"stylesheet\" href=\"css/fontawesome.min.css\">";
         echo "<footer class=\"footer fixed-bottom\">
   <div class=\"container-fluid bg-primary py-3\">
     <div class=\"container\">

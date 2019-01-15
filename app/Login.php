@@ -33,7 +33,7 @@ class Login
                     </div>
                 </div>               
                 <div class=\"form-group \">
-                    <button type=\"button\" class=\"btn btn-primary btn-lg btn-block login-button\" routerLink=\"/gmaps\" routerLinkActive=\"\">Login</button>
+                    <button type=\"button\" class=\"btn btn-secondary btn-lg btn-block login-button\" routerLink=\"/gmaps\" routerLinkActive=\"\">Login</button>
                 </div>          
                 </form>
             </div>

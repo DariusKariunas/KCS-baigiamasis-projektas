@@ -17,6 +17,9 @@ require __DIR__ . '\vendor\autoload.php';
     $head = new \KCSG\HeaderFooter();
     $head->header();
 
+    $err = new KCSG\Database\Validation();
+    $err->error();
+
     $reg = new KCSG\Register();
     $reg->register();
 

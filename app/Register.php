@@ -12,22 +12,22 @@ class Register
       <div class=\"row\">
         <div class=\"col-lg-8 col-md-10 cols-sm-10\">
           <div class=\"main-login main-center\">
-            <form class=\"form-horizontal\" method=\"post\" action=\"#\">
-              <div class=\"form-group\">
+            <form class=\"form-horizontal\" method='post' action='/dataprocess.php'>
+            <div class=\"form-group\">
                 <label for=\"name\" class=\"control-label\">Your Name</label>
                 <div>
                   <div class=\"input-group\">
                     <span class=\"input-group-addon\"><i class=\"fa fa-user fa\" aria-hidden=\"true\"> </i></span>
-                    <input type=\"text\" class=\"form-control\" name=\"name\" id=\"name\" placeholder=\"Enter your Name\" />
+                    <input type=\"text\" class=\"form-control\" name='name' id='name' placeholder=\"Enter your Name\" />
                   </div>
                 </div>
               </div>
               <div class=\"form-group\">
-                <label for=\"email\" class=\"control-label\">Your Email</label>
+                <label for='email' class=\"control-label\">Your Email</label>
                 <div>
                   <div class=\"input-group\">
                     <span class=\"input-group-addon\"><i class=\"fa fa-envelope fa\" aria-hidden=\"true\"></i></span>
-                    <input type=\"text\" class=\"form-control\" name=\"email\" id=\"email\" placeholder=\"Enter your Email\" />
+                    <input type=\"text\" class=\"form-control\" name='email' id='email' placeholder=\"Enter your Email\" />
                   </div>
                 </div>
               </div>
@@ -36,7 +36,7 @@ class Register
                 <div>
                   <div class=\"input-group\">
                     <span class=\"input-group-addon\"><i class=\"fa fa-users fa\" aria-hidden=\"true\"></i></span>
-                    <input type=\"text\" class=\"form-control\" name=\"username\" id=\"username\" placeholder=\"Enter your Username\" />
+                    <input type=\"text\" class=\"form-control\" name='username' id='username' placeholder=\"Enter your Username\" />
                   </div>
                 </div>
               </div>
@@ -45,7 +45,7 @@ class Register
                 <div>
                   <div class=\"input-group\">
                     <span class=\"input-group-addon\"><i class=\"fa fa-lock fa-lg\" aria-hidden=\"true\"></i></span>
-                    <input type=\"password\" class=\"form-control\" name=\"password\" id=\"password\" placeholder=\"Enter your Password\" />
+                    <input type=\"password\" class=\"form-control\" name='password' id='password' placeholder=\"Enter your Password\" />
                   </div>
                 </div>
               </div>
@@ -54,15 +54,15 @@ class Register
                 <div>
                   <div class=\"input-group\">
                     <span class=\"input-group-addon\"><i class=\"fa fa-lock fa-lg\" aria-hidden=\"true\"></i></span>
-                    <input type=\"password\" class=\"form-control\" name=\"confirm\" id=\"confirm\" placeholder=\"Confirm your Password\" />
+                    <input type=\"password\" class=\"form-control\" name='password2' id='password2' placeholder=\"Confirm your Password\" />
                   </div>
                 </div>
               </div>
-              <div class=\"form-group \">
-                <button type=\"button\" class=\"btn btn-primary btn-lg btn-block login-button\">Register</button>
+              <div class=\"input-group\">
+                <button type='submit' class=\"btn btn-secondary btn-lg btn-block login-button\">Register</button>
               </div>
               <div class=\"login-register\">
-                <a routerLink=\"/login\" routerLinkActive=\"\">Login</a>
+                <a href='/login.php'>Login</a>
               </div>
             </form>
           </div>
