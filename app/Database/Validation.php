@@ -14,26 +14,28 @@ class Validation
     }
 
     public function validate($value){
-        if (!preg_match("/^[a-zA-Z ]*$/", $value["name"])) {
+        if (empty($value['name'])) {
+            array_push($this->error, 'Name is required');
+        }else{
+            if(!preg_match("/^[a-zA-Z ]*$/", $value["name"])) {
             array_push($this->error, 'Name must contain only letters');
         }
-        if (!empty($value['email']) && !filter_var($value["email"], FILTER_VALIDATE_EMAIL)) {
-            array_push($this->error, 'Invalid email');
         }
-        if (empty($value['name'])){
-            array_push($this->error, 'Name is required');
-        }
-        if (empty($value['email'])){
+        if (empty($value['email'])) {
             array_push($this->error, 'Email is required');
-        }
-        if (empty($value['username'])){
+        } else {
+            if (!filter_var($value["email"], FILTER_VALIDATE_EMAIL)) {
+                array_push($this->error, 'Invalid email');
+            }}
+        if (empty($value['username'])) {
             array_push($this->error, 'Username is required');
         }
-        if (empty($value['password'])){
+        if (empty($value['password'])) {
             array_push($this->error, 'Password is required');
-        }
-        if ($value['password'] != $value['password2']){
-            array_push($this->error, 'Passwords do not match');
+        }else if(empty($value['password2'])) {
+            array_push($this->error, 'Repeat passwor');
+        }else if($value['password'] != $value['password2']) {
+                array_push($this->error, 'Passwords do not match');
         }
     }
 
@@ -47,8 +49,8 @@ class Validation
         }
     }
 
-    public function validatePost(){
-        if (empty($value["product"])){
+    public function validatePost($value){
+        if (empty($value["product_name"])){
             array_push($this->posterror, 'Product is required');
         }
         if (empty($value['description'])){
@@ -57,8 +59,11 @@ class Validation
         if (empty($value['city'])){
             array_push($this->posterror, 'City is required');
         }
-        if (empty($value['zipcode'])){
-            array_push($this->posterror, 'Zipcode is required');
+        if (empty($value['address'])){
+            array_push($this->posterror, 'Address is required');
+        }
+        if (empty($value['img'])){
+            array_push($this->posterror, 'Photo is required');
         }
     }
 

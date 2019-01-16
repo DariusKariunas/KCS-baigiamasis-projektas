@@ -13,7 +13,7 @@ class HeaderFooter
         $this->header = [
             ['route' => '/posts.php', 'name' => 'Add Post'],
             ['route' => '/about.php', 'name' => 'About Us'],
-            ['route' => '/', 'name' => 'Chat'],
+            ['route' => '/profile.php', 'name' => 'Your Posts'],
         ];
         $this->footer = [
             ['social' => 'https://www.facebook.com/', 'i' => 'fa fa-2x fa-fw fa-facebook text-white'],

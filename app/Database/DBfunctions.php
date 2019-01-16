@@ -63,4 +63,15 @@ class DBfunctions
         $stmt->bindValue(':password', $mas['password']);
         $stmt->execute();
     }
+
+    public function insertProjectMarkers(array $value){
+        $stmt = $this->conn->prepare("INSERT INTO project_markers (user_id, product_name, description, img, address, city) VALUES ( :user_id, :product_name, :description, :img, :address, :city)");
+        $stmt->bindValue(':user_id', $_SESSION['id']);
+        $stmt->bindValue(':product_name', $value['product_name']);
+        $stmt->bindValue(':description', $value['description']);
+        $stmt->bindValue(':img', $value['img']);
+        $stmt->bindValue(':address', $value['address']);
+        $stmt->bindValue(':city', $value['city']);
+        $stmt->execute();
+    }
 }

@@ -1,4 +1,5 @@
 var map;
+var geocoder;
 
 lastWindow=null;
 
@@ -22,6 +23,7 @@ function placeMarkerAndPanTo(latLng, map) {
         position: latLng,
         map: map
     });
+
 
     var infowindow = new google.maps.InfoWindow({
         content:'Position '+ latLng

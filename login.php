@@ -8,6 +8,10 @@ session_start();
 $head = new \KCSG\HeaderFooter();
 $head->header();
 
+if(isset($_SESSION['post']) && $_SESSION['post'] == true){
+    echo "<div style='display: flex; color:red' class='justify-content-center'>You need to be logged in to create Posts.</div>";
+}
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $uname = $_POST['username'];
     $getdata = new KCSG\Database\DBfunctions();
@@ -21,7 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $_SESSION['id'] = $array['id'];
             $_SESSION['logged'] = true;
-            header('location: index.php');
+            if ($_SESSION['post'] == true) {
+                session_unset($_SESSION['post']);
+                header('location: posts.php');
+            }else{
+                header('location: index.php');
+            }
         }
     }
 }
