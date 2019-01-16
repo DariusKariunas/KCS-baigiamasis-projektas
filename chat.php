@@ -7,3 +7,4 @@ session_start();
 echo "promt('enter your name')";
 
 header('location: index.php');
+

@@ -9,7 +9,7 @@ $head = new \KCSG\HeaderFooter();
 $head->header();
 
 if(isset($_SESSION['post']) && $_SESSION['post'] == true){
-    echo "<div style='display: flex; color:red' class='justify-content-center'>You need to be logged in to create Posts.</div>";
+    echo "<div style='display: flex; color:red' class='justify-content-center'>You need to be logged in to manage Posts.</div>";
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

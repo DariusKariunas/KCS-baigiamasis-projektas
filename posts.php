@@ -7,9 +7,6 @@ session_start();
 $head = new \KCSG\HeaderFooter();
 $head->header();
 
-$postForm = new KCSG\AddPost();
-$postForm->PostForm();
-
 $postRender = new KCSG\Database\Handler();
 $function = new KCSG\Database\DBfunctions();
 $err = new KCSG\Database\Validation();
@@ -32,6 +29,9 @@ if(isset($_SESSION['logged']) && $_SESSION['logged'] == true) {
     $_SESSION['post'] = true;
     header('location: login.php');
 }
+
+$postForm = new KCSG\AddPost();
+$postForm->PostForm();
 
 $foot = new \KCSG\HeaderFooter();
 $foot->footer();
