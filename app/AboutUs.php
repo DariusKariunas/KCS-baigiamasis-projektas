@@ -5,8 +5,8 @@ namespace KCSG;
 class AboutUs
 {
     function aboutUs(){
-        echo "<div class=\"container\">
-                <div class=\"row imgbackground\">
+        echo "<div class=\"container\" style='height: 100vh;'>
+                <div class=\"row imgbackground\" style='margin-top: 1em;'>
                    <div class=\"col\">
                       <h3>Snuber sharing place:</h3>
                    </div></div>

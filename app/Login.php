@@ -7,8 +7,8 @@ class Login
     function login()
     {
         echo "<div class=\"container\">
-              <div class=\"formated-login\" >
-              <div class=\"row main align-self-center\">
+              <div class=\"formated-login\">
+              <div class=\"row main\">
               <div class=\"panel-heading\">
             <div class=\"main-login main-center\">
                 <form class=\"form-horizontal\" method='post' action='/login.php'>                            

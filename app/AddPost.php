@@ -6,10 +6,8 @@ class AddPost
 {
     function PostForm()
     {
-        echo "<div class=\"container\">
-                 <div>
+        echo "<div class=\"container\" style='height: 100vh;'>
                     <h4>Product post info:</h4>
-                 </div>
                     <div class=\"row\">
                      <div class=\"col-lg-6 col-md-10\">
                        <div class=\"container\"></div>
@@ -28,7 +26,7 @@ class AddPost
                     <div class=\"form-row\">
                      <div class=\"form-group col-lg-12 col-md-6\">
                      <label for=\"exampleFormControlTextarea1\">Description</label>
-                     <textarea class=\"form-control\" name='description' id='description' rows=\"3\"></textarea>
+                     <textarea class=\"form-control\" name='description' id='description' rows=\"10\"></textarea>
                      </div>
                     </div>    
                     <div class=\"form-row\">
@@ -39,7 +37,7 @@ class AddPost
                     </div>
                     <div class=\"form-row\">
                       <div class=\"form-group col-md-6\">
-                        <label for=\"inputCity\">Coordinates</label>
+                        <label for=\"inputCity\">Coordinates (Click on map)</label>
                         <input type=\"text\" class=\"form-control\" name='city' id='city' value='0' readonly>
                        </div>
                       <div class=\"form-group col-md-6\">

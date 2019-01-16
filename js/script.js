@@ -25,7 +25,7 @@ function placeMarkerAndPanTo(latLng, map) {
     });
 
     var infowindow = new google.maps.InfoWindow({
-        content:'Position '+ latLng
+        content:'Positions ' + latLng
     });
 
     google.maps.event.addListener(marker, 'click', function() {
@@ -36,4 +36,3 @@ function placeMarkerAndPanTo(latLng, map) {
 
     map.panTo(latLng);
 }
-

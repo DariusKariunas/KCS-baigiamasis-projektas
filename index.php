@@ -20,7 +20,25 @@ $mark1 = new KCSG\Database\DBfunctions();
 $mark = $mark1->getMarkers();
 
 foreach ($mark as $item) {
-    echo "<script>new google.maps.Marker({
-        position: new google.maps.LatLng". $item['city'] .",
-        map: map});</script>";
+        echo "  
+          <script>
+                
+            marker = new google.maps.Marker({ position: new google.maps.LatLng". $item['city'] .", map: map});
+            infowindow = new google.maps.InfoWindow({
+		 					content: '".$item['product_name']."'   
+		 					+ '</br>' + '".$item['description']."' 
+		 					+ '</br>' + 'Contacts: ' + '".$item['address']."'  
+		 					+ '</br>' + '<img width=\"200px\" src='+ '".$item['img']."' +' >  '
+                        
+            });
+              google.maps.event.addListener(marker,'click', (function(marker, infowindow) {
+				return function(){					    
+                if (lastWindow) lastWindow.close();
+                    infowindow.open(map, marker);
+                    lastWindow=infowindow;
+							}}
+							)
+							(marker,infowindow));                            
+            </script>";
 }
+
