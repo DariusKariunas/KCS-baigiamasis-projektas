@@ -33,18 +33,18 @@ class AddPost
                     </div>    
                     <div class=\"form-row\">
                       <div class=\"form-group col-lg-12 col-md-6\">
-                       <label for=\"inputAddress\">Address</label>
-                       <input type=\"text\" class=\"form-control\" name='address' id='address' placeholder=\"1234 Main St\">
+                        <label for=\"exampleFormControlFile1\">Product photo URL:</label>
+                        <input type='text' class='form-control' id='img' name='img' \">
                       </div>
                     </div>
                     <div class=\"form-row\">
                       <div class=\"form-group col-md-6\">
-                        <label for=\"inputCity\">City</label>
-                        <input type=\"text\" class=\"form-control\" name='city' id='city'>
+                        <label for=\"inputCity\">Coordinates</label>
+                        <input type=\"text\" class=\"form-control\" name='city' id='city' value='0' readonly>
                        </div>
                       <div class=\"form-group col-md-6\">
-                        <label for=\"exampleFormControlFile1\">Product photo URL:</label>
-                        <input type='text' class='form-control' id='img' name='img' \">
+                         <label for=\"inputAddress\">Contact:</label>
+                         <input type=\"text\" class=\"form-control\" name='address' id='address' placeholder='37060000000'>
                       </div>
                       <div class=\"form-group col-md-6\">
                  <button type=\"submit\" class=\"btn btn-secondary\">Submit</button>

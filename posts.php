@@ -25,7 +25,7 @@ if(isset($_SESSION['logged']) && $_SESSION['logged'] == true) {
             echo "</div>";
         }
     }
-}else{
+}else if (!isset($_SESSION['logged'])){
     $_SESSION['post'] = true;
     header('location: login.php');
 }

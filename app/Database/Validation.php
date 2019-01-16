@@ -57,10 +57,10 @@ class Validation
             array_push($this->posterror, 'Description is required');
         }
         if (empty($value['city'])){
-            array_push($this->posterror, 'City is required');
+            array_push($this->posterror, 'Click map for coordinates');
         }
         if (empty($value['address'])){
-            array_push($this->posterror, 'Address is required');
+            array_push($this->posterror, 'Contacts is required');
         }
         if (empty($value['img'])){
             array_push($this->posterror, 'Photo is required');

@@ -183,3 +183,7 @@
 [2019-01-16 00:19:24] name.ERROR: error [] []
 [2019-01-16 00:38:55] name.WARNING: Foo [] []
 [2019-01-16 00:38:55] name.ERROR: error [] []
+[2019-01-16 01:22:05] name.WARNING: Foo [] []
+[2019-01-16 01:22:05] name.ERROR: error [] []
+[2019-01-16 01:24:24] name.WARNING: Foo [] []
+[2019-01-16 01:24:24] name.ERROR: error [] []

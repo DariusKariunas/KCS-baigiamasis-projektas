@@ -74,4 +74,12 @@ class DBfunctions
         $stmt->bindValue(':city', $value['city']);
         $stmt->execute();
     }
+
+    public function getMarkers(){
+        $stmt = $this->conn->prepare("SELECT * FROM project_markers");
+        $stmt->execute();
+        $stmt->setFetchMode(\PDO::FETCH_ASSOC);
+
+        return $stmt->fetchAll();
+    }
 }

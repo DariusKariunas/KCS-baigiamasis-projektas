@@ -23,14 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($_POST['password'] !== $array['password']) {
             echo "<div style='display: flex; color:red' class='justify-content-center'>Wrong password</div>>";
         } else {
-            $_SESSION['id'] = $array['id'];
-            $_SESSION['logged'] = true;
             if ($_SESSION['post'] == true) {
-                session_unset($_SESSION['post']);
+                session_unset();
                 header('location: posts.php');
             }else{
                 header('location: index.php');
             }
+            $_SESSION['id'] = $array['id'];
+            $_SESSION['logged'] = true;
         }
     }
 }

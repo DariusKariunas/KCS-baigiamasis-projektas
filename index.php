@@ -15,3 +15,12 @@ session_start();
 if(isset($_SESSION['post']) && $_SESSION['post'] == true){
     session_unset();
 }
+
+$mark1 = new KCSG\Database\DBfunctions();
+$mark = $mark1->getMarkers();
+
+foreach ($mark as $item) {
+    echo "<script>new google.maps.Marker({
+        position: new google.maps.LatLng". $item['city'] .",
+        map: map});</script>";
+}

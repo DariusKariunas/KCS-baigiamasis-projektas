@@ -6,8 +6,11 @@ session_start();
 $head = new \KCSG\HeaderFooter();
 $head->header();
 
-if(isset($_SESSION['post']) && $_SESSION['post'] == true){
-    echo "<div style='display: flex; color:red' class='justify-content-center'>You need to be logged in to manage Posts.</div>";
+if(isset($_SESSION['logged']) && $_SESSION['logged'] == true){
+
+}else{
+    $_SESSION['post'] = true;
+    header('location: login.php');
 }
 
 $foot = new \KCSG\HeaderFooter();

@@ -1,10 +1,8 @@
 var map;
-var geocoder;
 
 lastWindow=null;
 
 function initMap() {
-    var map;
     map = new google.maps.Map(document.getElementById('map'), {
         center: {lat: 54.898178, lng: 23.902594},
         zoom: 12,
@@ -12,8 +10,10 @@ function initMap() {
 
     });
 
-    map.addListener('click', function(e) {
+        map.addListener('click', function(e) {
         placeMarkerAndPanTo(e.latLng, map);
+        var pos = e.latLng;
+        document.getElementById("city").value = pos;
     });
 }
 
@@ -23,7 +23,6 @@ function placeMarkerAndPanTo(latLng, map) {
         position: latLng,
         map: map
     });
-
 
     var infowindow = new google.maps.InfoWindow({
         content:'Position '+ latLng
@@ -37,3 +36,4 @@ function placeMarkerAndPanTo(latLng, map) {
 
     map.panTo(latLng);
 }
+
