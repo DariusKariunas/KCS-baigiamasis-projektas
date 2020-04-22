@@ -1,1 +1,1 @@
-# KCS-baigiamasis-projektas
+# Google maps API project
