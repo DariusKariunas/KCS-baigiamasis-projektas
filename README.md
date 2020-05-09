@@ -1,4 +1,4 @@
-# Google maps API projec
+# Google maps API project
 
 
 Registration and Login made with PHP, object oriented with Composer.
