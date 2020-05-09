@@ -1,0 +1,164 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: rgb(226, 227, 228);
+}
+
+#map {
+    height: 100%;
+}
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+    z-index:-9999;
+}
+
+.header-font {
+    font-family: "Josefin Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #fd1506;
+}
+
+.bg-primary {
+    width: 100vw;
+    background-color: #343a40 !important;
+}
+
+.footer {
+
+    background: #EDEFF1;
+    height: auto;
+    padding-bottom: 0px;
+    margin-top: 0px;
+
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #DDDDDD;
+}
+.footer p {
+    margin: 1px;
+    padding: 1px;
+}
+.footer img {
+    max-width: 100%;
+}
+.footer h3 {
+    border-bottom: 1px solid #BAC1C8;
+    color: #54697E;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    padding: 40px 0 10px;
+    text-transform: uppercase;
+}
+.footer ul {
+    font-size: 13px;
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: 15px;
+    color: #7F8C8D;
+}
+.footer ul li a {
+    padding: 0 0 5px 0;
+    display: block;
+}
+.footer a {
+    color: #78828D
+}
+
+/*Register styles:*/
+.formated{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.main{
+    margin-top: 2px;
+    margin-bottom: 10px;
+}
+
+h1.title {
+    font-size: 50px;
+    font-family: 'Passion One', cursive;
+    font-weight: 400;
+}
+
+hr{
+    width: 10%;
+    color: #fff;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+label{
+    margin-bottom: 15px;
+}
+
+input,
+input::-webkit-input-placeholder {
+    font-size: 11px;
+    padding-top: 3px;
+}
+
+.main-login{
+    background-color: #fff;
+    /* shadows and rounded borders */
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.main-center{
+    margin-top: 30px;
+    padding: 40px 40px;
+    width: 50vw;
+
+}
+
+.login-button{
+    margin-top: 5px;
+}
+
+.login-register{
+    color: black;
+    text-align: center;
+}
+/*Register ^*/
+/*Login :*/
+.formated-login{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+}
+/*Login ^*/
+#chatbtn{
+    color: rgba(255,255,255,.5);
+}
+#chatbtn:hover {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+}
+#chatbtn:active{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+}
+

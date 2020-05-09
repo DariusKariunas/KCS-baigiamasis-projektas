@@ -1,0 +1,18 @@
+{
+    "name": "simas/snuber3",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Simas Armolaitis",
+            "email": "s.armolaitis@gmail.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^1.24"
+    },
+    "autoload":{
+        "psr-4": {
+            "KCSG\\": "app/"
+        }
+    }
+}
